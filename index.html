@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>soMLier</title>
+        <meta charset="utf-8">
+
+        <meta name="theme-color" content="#af272f">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+        <link rel="stylesheet" href='style.css'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link rel="icon" href="./files/kevink1113.png">
+        <link rel="apple-touch-icon" href="./files/apple-touch-icon.png">
+        
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+        <!--
+        <script> 
+            setInterval(function(){ 
+                /* if input[id="slide01"] */
+                $("#slide02").trigger("click"); 
+            },4000)
+        </script>
+        -->
+        <script>
+            setInterval(
+                function() {
+                    if (document.getElementById('slide01').checked == true) {
+                        document.getElementById('slide02').checked = true;
+                        return;
+                    }
+                    if (document.getElementById('slide02').checked == true) {
+                        document.getElementById('slide03').checked = true;
+                        return;
+                    }
+                    if (document.getElementById('slide03').checked == true) {
+                        document.getElementById('slide01').checked = true;
+                        return;
+                    }
+                }
+                , 5000
+            )
+        </script>
+
+    </head>
+
+    <body>
+        <!-- start progress bar --> 
+        <script type="text/javascript" src="https://rawcdn.githack.com/mburakerman/prognroll/0feda211643153bce2c69de32ea1b39cdc64ffbe/src/prognroll.js"></script> 
+        
+        <script type="text/javascript"> 
+            $(function() { 
+            $("body").prognroll( 
+                {height: 3, color:"#ab9bbf"} 
+            ); 
+            $(".content").prognroll({ 
+            custom:true}); 
+            }); 
+        </script> 
+        <!-- end progress bar -->
+
+        <!-- AOS -->
+        <script> 
+            AOS.init(); 
+        </script>
+
+        <div class="ox">
+            <input type = "checkbox" id = "menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class = "sidebar">
+                <ul class = "sidebar_list">
+                    <li><a href="https://kevink1113.tistory.com/">소개</a></li>
+                    <li><a href="#Career">활동</a></li>
+                    <li><a href="#Contacts">인공지능 연계전공</a></li>
+                    <li><a href="#Contacts">가입/문의</a></li>
+                </ul>
+                <label for="menuicon"></label>
+            </div>
+            <label for="menuicon" class="background"></label>
+        </div>
+
+
+        <div class="nav">
+            <div class="nav_bar_back"><a href="index.html">soMLier</a></div>
+            <img class = "logo" src = "그림1.png" alt="soMLier">
+            <div class="nav_menu">
+                <ul class="nav_links">
+                    <li><a href="https://kevink1113.tistory.com/">소개</a></li>
+                    <li><a href="#Career">활동</a></li>
+                    <li><a href="#Contacts">인공지능 연계전공</a></li>
+                    <li><a href="#Contacts">가입/문의</a></li>
+                </ul>
+            </div>
+        </div>
+            
+        <div class="section">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <div class="slidewrap">
+                
+                <ul class="slidelist">
+                    <!-- 슬라이드 영역 -->
+                    <li class="slideitem">
+                        <a>
+                            <div class="textbox">
+                                <h3>첫번째 슬라이드</h3>
+                                <p>첫번째 슬라이드 입니다.</p>
+                            </div>
+                            <img src="./img/1.jpg">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            
+                            <div class="textbox">
+                                <h3>두번째 슬라이드</h3>
+                                <p>두번째 슬라이드 입니다.</p>
+                            </div>
+                            <img src="./img/2.jpg">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a>
+                            
+                            <div class="textbox">
+                                <h3>세번째 슬라이드</h3>
+                                <p>세번째 슬라이드 입니다.</p>
+                            </div>
+                            <img src="./img/3.jpg">
+                        </a>
+                    </li class="slideitem">
+        
+                    <!-- 좌,우 슬라이드 버튼 -->
+                    <div class="slide-control">
+                        <div>
+                            <label for="slide03" class="left"></label>
+                            <label for="slide02" class="right"></label>
+                        </div>
+                        <div>
+                            <label for="slide01" class="left"></label>
+                            <label for="slide03" class="right"></label>
+                        </div>
+                        <div>
+                            <label for="slide02" class="left"></label>
+                            <label for="slide01" class="right"></label>
+                        </div>
+                    </div>
+        
+                </ul>
+                <!-- 페이징 -->
+                <ul class="slide-pagelist">
+                    <li><label for="slide01"></label></li>
+                    <li><label for="slide02"></label></li>
+                    <li><label for="slide03"></label></li>
+                </ul>
+            </div>
+        
+            
+        </div>
+        
+        
+
+
+        <div class="main_text">
+            <!-- About -->
+            
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding-top: 50px; padding-bottom: 50px;">
+                
+                <div class="col" style="width: 200px;">
+                    <img src="img/sl.png" style="width: 200px; height: 200px; object-fit: cover;"></img>
+                </div>
+                <div class="col" style="width: 600px; margin-left: 40px;">
+                    <h1>About <span class="accent">soMLier</span></h1>
+                    soMLier는 학부생들끼리 ai에 관련된 지식과 코딩 실력을 스터디를 통해 늘리고,im. Curabitur suscipitur. Vestibulum turpis justo, vulputate at erat eu, facilisis feugiat augue. Nam placerat dapibus tellus, vitae interdum felis pulvinar ut. Suspendisse varius augue ac enim blandit, a facilisis ex congue.
+                </div>
+
+            </div>
+
+            <div style = "clear:both"></div>
+
+
+            <h2>Lorem</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget pulvinar mi. Etiam ultrices, nunc sit amet imperdiet molestie, est odio tincidunt enim, ut dignissim magna ligula id sapien. <br>
+            Suspendisse elit velit, molestie id molestie sed, feugiat fermentum enim. Curabitur suscipit luctus dui imperdiet ultricies. Ut porttitor velit sit amet arcu auctor, a facilisis mi egestas. Nunc tincidunt metus nec ligula tincidunt, sed tristique quam efficitur. Vestibulum turpis justo, vulputate at erat eu, facilisis feugiat augue. Nam placerat dapibus tellus, vitae interdum felis pulvinar ut. Suspendisse varius augue ac enim blandit, a facilisis ex congue.
+            <h2>Ipsum</h2>
+            Vivamus non massa sem. Curabitur a nunc mollis, tempus urna dignissim, mattis urna. Curabitur euismod metus tellus. Nam pulvinar sem nisi, nec tempus dolor interdum at. In volutpat nec sapien eu blandit. Quisque et metus nec est blandit mollis. Vivamus fermentum libero quis tortor tempor, in vehicula nunc lacinia. Aliquam mauris lacus, laoreet eu libero vel, facilisis hendrerit risus. Cras vehicula vulputate rhoncus. Curabitur ac tortor tincidunt, sagittis massa sed, faucibus sem. Maecenas pretium ex eros, malesuada vehicula eros consectetur vitae. Mauris interdum egestas lorem, nec dapibus est interdum eget. Donec quis volutpat tellus.
+
+
+            
+        </div>
+
+        
+
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <ul class="footer_links">
+                <li id="copyright">© 2020 soMLier</li>
+                <li><a href="#About">소개</a></li>
+                <li><a href="#Career">활동</a></li>
+                <li><a href="#Contacts">인공지능 연계전공</a></li>
+                <li><a href="#Contacts">가입/문의</a></li>
+            </ul>
+            <div style="line-height: 10px; padding-bottom: 20px; font-size: 0.5rem;">Design by SangWon Kang</div>
+        </div>
+           
+
+    </body>
+</html>
