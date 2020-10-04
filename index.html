@@ -41,9 +41,21 @@
                         }
                     }
                 }
-                , 5000
+                , 6000
             )
         </script>
+        <!--
+        <script>
+            $('body').on("mousewheel", function () {
+            event.preventDefault();
+
+            var wheelDelta = event.wheelDelta;
+
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+            });
+        </script>
+        -->
 
     </head>
 
@@ -76,10 +88,10 @@
             </label>
             <div class = "sidebar">
                 <ul class = "sidebar_list">
-                    <li><a href="https://kevink1113.tistory.com/">소개</a></li>
-                    <li><a href="#Career">활동</a></li>
-                    <li><a href="#Contacts">인공지능 연계전공</a></li>
-                    <li><a href="#Contacts">가입/문의</a></li>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">활동</a></li>
+                    <li><a href="#">인공지능 연계전공</a></li>
+                    <li><a href="#">가입/문의</a></li>
                 </ul>
                 <label for="menuicon"></label>
             </div>
@@ -172,12 +184,12 @@
         <div class="main_text">
             <!-- About -->
             
-            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding-top: 50px; padding-bottom: 50px;">
+            <div id="about">
                 
-                <div class="col" style="width: 200px;">
-                    <img src="img/sl.png" style="width: 200px; height: 200px; object-fit: cover;"></img>
+                <div class="col" style="width: 250px;">
+                    <img src="img/deep_learning.png" style="width: 250px; height: 250px; object-fit: contain;"></img>
                 </div>
-                <div class="col" style="width: 600px; margin-left: 40px;">
+                <div class="col" id="img_text">
                     <h1>About <span class="accent">soMLier</span></h1>
                     soMLier는 학부생들끼리 ai에 관련된 지식과 코딩 실력을 스터디를 통해 늘리고,im. Curabitur suscipitur. Vestibulum turpis justo, vulputate at erat eu, facilisis feugiat augue. Nam placerat dapibus tellus, vitae interdum felis pulvinar ut. Suspendisse varius augue ac enim blandit, a facilisis ex congue.
                 </div>
@@ -186,31 +198,51 @@
 
             <div style = "clear:both"></div>
 
-
             <h2>Lorem</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget pulvinar mi. Etiam ultrices, nunc sit amet imperdiet molestie, est odio tincidunt enim, ut dignissim magna ligula id sapien. <br>
             Suspendisse elit velit, molestie id molestie sed, feugiat fermentum enim. Curabitur suscipit luctus dui imperdiet ultricies. Ut porttitor velit sit amet arcu auctor, a facilisis mi egestas. Nunc tincidunt metus nec ligula tincidunt, sed tristique quam efficitur. Vestibulum turpis justo, vulputate at erat eu, facilisis feugiat augue. Nam placerat dapibus tellus, vitae interdum felis pulvinar ut. Suspendisse varius augue ac enim blandit, a facilisis ex congue.
+            
+
+        </div>
+
+            
+        <div class="background_fixed">
+           
+            <div class="ico_text">
+                <h1>icon1</h1>
+                description
+            </div>
+            <div class="ico_text">
+                <img src="img/noun_Deep Learning_1701149.svg" >
+                설명
+            </div>
+           
+            <div class="ico_text">
+                <h1>icon2</h1>
+                description
+            </div>
+        </div>
+
+        <div class="main_text">
             <h2>Ipsum</h2>
             Vivamus non massa sem. Curabitur a nunc mollis, tempus urna dignissim, mattis urna. Curabitur euismod metus tellus. Nam pulvinar sem nisi, nec tempus dolor interdum at. In volutpat nec sapien eu blandit. Quisque et metus nec est blandit mollis. Vivamus fermentum libero quis tortor tempor, in vehicula nunc lacinia. Aliquam mauris lacus, laoreet eu libero vel, facilisis hendrerit risus. Cras vehicula vulputate rhoncus. Curabitur ac tortor tincidunt, sagittis massa sed, faucibus sem. Maecenas pretium ex eros, malesuada vehicula eros consectetur vitae. Mauris interdum egestas lorem, nec dapibus est interdum eget. Donec quis volutpat tellus.
 
 
             
         </div>
-
         
-
         
 
         <!-- Footer -->
         <div class="footer">
             <ul class="footer_links">
                 <li id="copyright">© 2020 soMLier</li>
-                <li><a href="#About">소개</a></li>
-                <li><a href="#Career">활동</a></li>
-                <li><a href="#Contacts">인공지능 연계전공</a></li>
-                <li><a href="#Contacts">가입/문의</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">활동</a></li>
+                <li><a href="#">인공지능 연계전공</a></li>
+                <li><a href="#">가입/문의</a></li>
             </ul>
-            <div style="line-height: 10px; padding-bottom: 20px; font-size: 0.5rem;">Design by SangWon Kang</div>
+            <div style="line-height: 10px; padding-bottom: 20px; font-size: 0.5rem;">Designed by SangWon Kang</div>
         </div>
            
 

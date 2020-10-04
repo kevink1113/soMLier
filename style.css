@@ -1,5 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;900&family=Roboto&display=swap');
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 html {
     -webkit-overflow-scrolling : touch;
     scroll-behavior: smooth;
@@ -147,6 +198,8 @@ input#menuicon:checked ~ .background { opacity: 1; visibility: visible;}
     padding-left: 5rem;
     display: block;
     z-index: 10000;
+
+    line-height: 48px;
 }
 .nav_menu {
     position: fixed;
@@ -175,15 +228,38 @@ body {
     font-weight: 300;
     font-size: 1rem;
     word-break: keep-all;
+
+    line-height: inherit;
 }
 
 
 
 
 
-.main_text { margin-left: 2rem;  margin-right: 2rem;}
+.main_text { 
+    margin-left: 8rem;  
+    margin-right: 8rem;
 
+    margin-left: 10vw;
+    margin-right: 10vw;
+    line-height: 2;
+}
 
+#about {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: center; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+#about #img_text {
+    width: 600px;
+    margin-left: 40px;
+}
+
+.background_fixed .ico_text { flex-direction:column; width: 180px; text-align: center; }
 
 .mini_title {
     font-size: calc(10px + 4vmin);
@@ -236,6 +312,28 @@ a.link {
     margin-left: 5px;
     margin-bottom: 30px;
 }
+
+
+.background_fixed {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(/img/node_unsplash.jpg); 
+    background-attachment: fixed; 
+    height: 400px; 
+    background-position-y: 60%; background-position: center; background-size: cover;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; 
+    margin-top: 50px; margin-bottom: 50px;
+
+    color: white;
+
+    justify-content: space-around;
+
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
 
 
 .footer {
@@ -297,15 +395,15 @@ a.link {
 
 /* 좌,우 슬라이드 버튼 */
 .slide-control > div {display:none;}
-.section .left {left: 10px;background:url('./img/left.png') center center / 100% no-repeat;}
-.section .right {right:10px;background:url('./img/right.png') center center / 100% no-repeat;}
+.section .left {left: 10px;background:url('./img/left_arrow.png') center center / 100% no-repeat;}
+.section .right {right:10px;background:url('./img/right_arrow.png') center center / 100% no-repeat;}
 .section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
 .section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
 .section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
 
 /* 페이징 */
-.slide-pagelist {text-align:center;padding:20px; margin-left: auto; margin-right: auto;} 
-.slide-pagelist > li {display:inline-block;vertical-align:middle; margin-top: -100px;}
+.slide-pagelist {text-align:center;padding:20px; margin-left: auto; margin-right: auto; padding: 0; height: 0;} 
+.slide-pagelist > li {display:inline-block; vertical-align:middle; margin-top: -60px;}
 .slide-pagelist > li > label {display:block;padding:2px 16px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer; position: relative; }
 .section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#af272f;}
 .section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#af272f;}
@@ -329,4 +427,8 @@ li {
     ul.nav_links { visibility: hidden; }
     #copyright { display: block; margin: 0; line-height: 100px; padding-right: 0;}
     .footer { line-height: 100px;}
+    #about .col {
+        margin-left: 0;
+    }
+    
 }
