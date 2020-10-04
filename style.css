@@ -362,7 +362,7 @@ a.link {
 }
 .footer_links a { text-decoration: none; color: white; }
 .footer ul { margin-block-end: 0; padding-inline-start: 0;}
-
+.footer a { text-decoration: none; color: white; }
 
 
 
