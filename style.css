@@ -315,7 +315,7 @@ a.link {
 
 
 .background_fixed {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(/img/node_unsplash.jpg); 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./img/node.jpg); 
     background-attachment: fixed; 
     height: 400px; 
     background-position-y: 60%; background-position: center; background-size: cover;
