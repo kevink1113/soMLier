@@ -28,17 +28,17 @@
         <script>
             setInterval(
                 function() {
-                    if (document.getElementById('slide01').checked == true) {
-                        document.getElementById('slide02').checked = true;
-                        return;
-                    }
-                    if (document.getElementById('slide02').checked == true) {
-                        document.getElementById('slide03').checked = true;
-                        return;
-                    }
-                    if (document.getElementById('slide03').checked == true) {
-                        document.getElementById('slide01').checked = true;
-                        return;
+                    var slide = document.getElementsByName('slide')
+                    for(var i = 0; i< slide.length; i++) {
+                        if(slide[slide.length-1].checked) {
+                            slide[0].checked = true;
+                            return;
+                        }
+                        
+                        if(slide[i].checked) {
+                            slide[i+1].checked = true;
+                            return;
+                        }
                     }
                 }
                 , 5000
